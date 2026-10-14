@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demonstração do DOM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1 id="titulo">Título original</h1>
+
+    <!-- Menu: cada botão mostra uma "página" diferente -->
+    <nav>
+      <button class="ativo" data-pagina="pagina-texto">Texto e estilo</button>
+      <button data-pagina="pagina-lista">Criar elementos</button>
+      <button data-pagina="pagina-form">Ler o que foi digitado</button>
+    </nav>
+
+    <!-- PÁGINA 1: alterar texto e estilo -->
+    <section id="pagina-texto" class="pagina visivel">
+      <p class="texto">Primeiro parágrafo.</p>
+      <p class="texto">Segundo parágrafo.</p>
+
+      <div class="linha">
+        <button id="btn-mudar-titulo">Mudar o título</button>
+        <button id="btn-maiusculas">Parágrafos em maiúsculas</button>
+        <button id="btn-destaque">Ligar/desligar destaque</button>
+        <button id="btn-escuro">Modo escuro</button>
+      </div>
+    </section>
+
+    <!-- PÁGINA 2: criar e remover elementos -->
+    <section id="pagina-lista" class="pagina">
+      <h2>Lista de cores</h2>
+      <ul id="lista"></ul>
+      <div class="linha">
+        <button id="btn-adicionar">Adicionar cor</button>
+        <button id="btn-limpar">Limpar lista</button>
+      </div>
+    </section>
+
+    <!-- PÁGINA 3: ler o valor de um campo -->
+    <section id="pagina-form" class="pagina">
+      <h2>Diga seu nome</h2>
+      <div class="linha">
+        <input id="campo-nome" placeholder="Seu nome">
+      </div>
+      <p id="saudacao">Digite algo no campo acima.</p>
+      <p id="contador">Letras: 0</p>
+    </section>
+  </main>
+
+  <!-- O script fica no fim para rodar depois que a página carregou -->
+  <script src="script.js"></script>
+</body>
+</html>
